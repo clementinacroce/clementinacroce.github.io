@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clementina Crocè</title>
-  <meta name="description"
-        content="Clementina Crocè — Applied economist, University of Padua.">
 
   <style>
     body {
@@ -18,20 +16,35 @@
     }
 
     main {
-      max-width: 720px;
+      max-width: 780px;
       margin: 80px auto;
       padding: 0 24px;
     }
 
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 120px;
+      gap: 36px;
+      align-items: start;
+    }
+
     h1 {
-      font-size: clamp(32px, 6vw, 42px);
+      font-size: clamp(28px, 5vw, 40px);
       font-weight: normal;
       line-height: 1.2;
-      margin-bottom: 36px;
+      margin: 0 0 28px;
     }
 
     p {
-      margin-bottom: 22px;
+      margin: 0 0 22px;
+    }
+
+    .portrait {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 4px;
     }
 
     a {
@@ -42,32 +55,50 @@
     nav {
       display: flex;
       gap: 28px;
-      margin-top: 36px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 480px) {
+      main {
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      .intro {
+        grid-template-columns: minmax(0, 1fr) 90px;
+        gap: 18px;
+      }
     }
   </style>
 </head>
 
 <body>
-<main>
-  <img class="portrait" src="Foto_Clementina_Crocè.jpg" alt="Clementina Crocè">
+  <main>
+    <div class="intro">
+      <div>
+        <h1>Clementina Crocè</h1>
 
-  <h1>Clementina Crocè</h1>
+        <p>
+          I am an applied economist and a postdoctoral researcher
+          at the University of Padua.
+        </p>
 
-    <p>
-      I am an applied economist and a postdoctoral researcher
-      at the University of Padua.
-    </p>
+        <p>
+          My research interests include labor economics,
+          the economics of education, gender economics,
+          and development economics.
+        </p>
 
-    <p>
-      My research interests include labor economics,
-      the economics of education, gender economics,
-      and development economics.
-    </p>
+        <nav aria-label="Contact and CV">
+          <a href="cv.pdf">CV</a>
+          <a href="mailto:clementina.croce@unipd.it">Email</a>
+        </nav>
+      </div>
 
-    <nav aria-label="Contact and CV">
-      <a href="cv.pdf">CV</a>
-      <a href="mailto:clementina.croce@unipd.it">Email</a>
-    </nav>
+      <img class="portrait"
+           src="Foto_Clementina_Crocè.jpg"
+           alt="Clementina Crocè">
+    </div>
   </main>
 </body>
 </html>
